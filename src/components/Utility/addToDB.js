@@ -1,5 +1,7 @@
 // this is for read-list
 
+import { toast } from "react-toastify";
+
 // kothay add korbo er jnno function lagbe----
 
 export const getStoredReadList = () => {
@@ -25,6 +27,7 @@ export const addToStoreReadList = (id) => {
     // storedList- er mddhe jei id thakbe seta string akare rakhte hbe...local storage er nature
     const storeListIdStr = JSON.stringify(storedList);
     localStorage.setItem("read-list", storeListIdStr);
+    toast("added to read list");
   }
 };
 
@@ -51,6 +54,7 @@ export const addtoStoreWishList = (id) => {
     storedWishList.push(id);
     const storedWishListStr = JSON.stringify(storedWishList);
     localStorage.setItem("wish-list", storedWishListStr);
+    toast("added to wish list");
   }
 };
 

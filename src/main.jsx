@@ -8,7 +8,8 @@ import ErrorPage from "./components/ErrorPage/ErrorPage.jsx";
 import Home from "./components/Home/Home.jsx";
 import ListedBooks from "./components/ListedBooks/ListedBooks.jsx";
 import BookDetails from "./components/BookDetails/BookDetails.jsx";
-
+import React from "react";
+import { ToastContainer } from "react-toastify";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,5 +36,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer />
   </StrictMode>
 );

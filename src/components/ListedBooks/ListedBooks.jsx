@@ -54,7 +54,9 @@ const ListedBooks = () => {
       </TabList>
 
       <TabPanel className="text-black">
-        <h2 className="text-center">Books i Read: {readListBook.length}</h2>
+        <h2 className="text-center text-2xl">
+          Books i Read: {readListBook.length}
+        </h2>
         <h2 className="grid md:grid-cols-3 lg:grid-cols-3 gap-5 my-10">
           {readListBook.map((book) => (
             <Book key={book.bookId} book={book}></Book>
@@ -62,7 +64,7 @@ const ListedBooks = () => {
         </h2>
       </TabPanel>
       <TabPanel className="text-black">
-        <h2 className="text-center">
+        <h2 className="text-center text-2xl">
           Books i wish to list:{wishListBook.length}
         </h2>
         <h2 className="grid md:grid-cols-3 lg:grid-cols-3 gap-5 my-10">
